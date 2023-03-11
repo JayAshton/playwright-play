@@ -1,4 +1,5 @@
-import { test, expect } from "@playwright/test";
+import { expect } from "@playwright/test";
+import test from "../fixtures";
 
 test.describe("test", () => {
   test.beforeEach(async ({ page }) => {
@@ -6,8 +7,7 @@ test.describe("test", () => {
     await page.goto("");
   });
 
-  test("Logo is present on homepage", async ({ page }) => {
-    const logo = page.locator("#home_img");
-    await expect(logo).toBeVisible();
+  test("Logo is present on homepage", async ({ homePage }) => {
+    await expect(homePage.logo).toBeVisible();
   });
 });
