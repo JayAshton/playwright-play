@@ -1,1 +1,1 @@
-A test suite for the imdb.com website
+A test suite for the examples on http://the-internet.herokuapp.com/
