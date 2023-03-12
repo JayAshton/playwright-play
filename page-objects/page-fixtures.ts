@@ -1,12 +1,12 @@
 // my-test.ts
-import { HomepagePageObject } from "./homepage.po";
+import { AddRemoveElementsPageObject } from "./add-remove-elements.po";
 
 export interface PageFixtures {
-  homePage: HomepagePageObject;
+  addRemoveElementsPage: AddRemoveElementsPageObject;
 }
 
 export const pageFixtures = {
-  homePage: async ({ page }, use) => {
-    await use(new HomepagePageObject(page));
+  addRemoveElementsPage: async ({ page }, use) => {
+    await use(new AddRemoveElementsPageObject(page));
   },
 };
