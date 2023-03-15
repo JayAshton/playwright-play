@@ -1,5 +1,5 @@
-import { test as baseTest } from "@playwright/test";
-import { PageFixtures, pageFixtures } from "./page-objects/page-fixtures";
+import { test as baseTest } from '@playwright/test';
+import { PageFixtures, pageFixtures } from './page-objects/page-fixtures';
 
 export type CommonFixtures = PageFixtures;
 

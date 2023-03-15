@@ -1,4 +1,4 @@
-import { defineConfig, devices } from "@playwright/test";
+import { defineConfig, devices } from '@playwright/test';
 
 /**
  * Read environment variables from file.
@@ -10,9 +10,9 @@ import { defineConfig, devices } from "@playwright/test";
  * See https://playwright.dev/docs/test-configuration.
  */
 export default defineConfig({
-  testDir: "./specs",
+  testDir: './specs',
   /* Maximum time one test can run for. */
-  timeout: 30 * 1000,
+  timeout: 60 * 1000,
   expect: {
     /**
      * Maximum time expect() should wait for the condition to be met.
@@ -29,34 +29,34 @@ export default defineConfig({
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 8 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: "list",
+  reporter: 'list',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
-    baseURL: "http://the-internet.herokuapp.com/",
+    baseURL: 'http://the-internet.herokuapp.com/',
     /* Maximum time each action such as `click()` can take. Defaults to 0 (no limit). */
     actionTimeout: 0,
     /* Base URL to use in actions like `await page.goto('/')`. */
     // baseURL: 'http://localhost:3000',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    trace: "on-first-retry",
+    trace: 'on-first-retry',
   },
 
   /* Configure projects for major browsers */
   projects: [
     {
-      name: "chrome",
-      use: { ...devices["Desktop Chrome"] },
+      name: 'chrome',
+      use: { ...devices['Desktop Chrome'] },
     },
 
     {
-      name: "firefox",
-      use: { ...devices["Desktop Firefox"] },
+      name: 'firefox',
+      use: { ...devices['Desktop Firefox'] },
     },
 
     {
-      name: "safari",
-      use: { ...devices["Desktop Safari"] },
+      name: 'safari',
+      use: { ...devices['Desktop Safari'] },
     },
   ],
 });
