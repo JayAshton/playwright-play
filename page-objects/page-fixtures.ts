@@ -1,10 +1,12 @@
 // my-test.ts
 import { AddRemoveElementsPageObject } from './add-remove-elements.po';
 import { BrokenImagesPageObject } from './broken-images.po';
+import { CheckboxesPageObject } from './checkboxes.po';
 
 export interface PageFixtures {
   addRemoveElementsPage: AddRemoveElementsPageObject;
   brokenImagesPage: BrokenImagesPageObject;
+  checkboxPage: CheckboxesPageObject;
 }
 
 export const pageFixtures = {
@@ -13,5 +15,8 @@ export const pageFixtures = {
   },
   brokenImagesPage: async ({ page }, use) => {
     await use(new BrokenImagesPageObject(page));
+  },
+  checkboxPage: async ({ page }, use) => {
+    await use(new CheckboxesPageObject(page));
   },
 };
