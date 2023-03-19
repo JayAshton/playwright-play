@@ -1,4 +1,3 @@
-// playwright-dev-page.ts
 import { Page } from '@playwright/test';
 
 export class BrokenImagesPageObject {
