@@ -20,7 +20,6 @@ test.describe('Dropdown List', () => {
 
   test('When selecting an option, the selected option is displayed', async ({
     dropdownPage,
-    page,
   }) => {
     for (let i = 0; i < correctOptions.length; i++) {
       await dropdownPage.selectOption(correctOptions[i]);
