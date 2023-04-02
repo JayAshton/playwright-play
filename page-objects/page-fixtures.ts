@@ -3,12 +3,14 @@ import { AddRemoveElementsPageObject } from './add-remove-elements.po';
 import { BrokenImagesPageObject } from './broken-images.po';
 import { CheckboxesPageObject } from './checkboxes.po';
 import { DropdownPageObject } from './dropdown.po';
+import { ExitIntentPageObject } from './exit-intent.po';
 
 export interface PageFixtures {
   addRemoveElementsPage: AddRemoveElementsPageObject;
   brokenImagesPage: BrokenImagesPageObject;
   checkboxPage: CheckboxesPageObject;
   dropdownPage: DropdownPageObject;
+  exitIntentPage: ExitIntentPageObject;
 }
 
 export const pageFixtures = {
@@ -23,5 +25,8 @@ export const pageFixtures = {
   },
   dropdownPage: async ({ page }, use) => {
     await use(new DropdownPageObject(page));
+  },
+  exitIntentPage: async ({ page }, use) => {
+    await use(new ExitIntentPageObject(page));
   },
 };
