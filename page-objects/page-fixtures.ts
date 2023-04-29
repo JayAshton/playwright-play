@@ -5,6 +5,7 @@ import { CheckboxesPageObject } from './checkboxes.po';
 import { DropdownPageObject } from './dropdown.po';
 import { ExitIntentPageObject } from './exit-intent.po';
 import { FileUploadPageObject } from './file-upload.po';
+import { InfiniteScrollPageObject } from './infinite-scroll.po';
 
 export interface PageFixtures {
   addRemoveElementsPage: AddRemoveElementsPageObject;
@@ -13,6 +14,7 @@ export interface PageFixtures {
   dropdownPage: DropdownPageObject;
   exitIntentPage: ExitIntentPageObject;
   fileUploadPage: FileUploadPageObject;
+  infiniteScrollPage: InfiniteScrollPageObject;
 }
 
 export const pageFixtures = {
@@ -33,5 +35,8 @@ export const pageFixtures = {
   },
   fileUploadPage: async ({ page }, use) => {
     await use(new FileUploadPageObject(page));
+  },
+  infiniteScrollPage: async ({ page }, use) => {
+    await use(new InfiniteScrollPageObject(page));
   },
 };
