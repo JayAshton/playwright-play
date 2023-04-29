@@ -14,13 +14,12 @@ test.describe('Exit intent', () => {
     for (let index = 0; index < amountToScroll; index++) {
       const contentBeforeScroll =
         await infiniteScrollPage.getNumberOfParagraphs();
-      console.log('BEFORE: ' + contentBeforeScroll);
 
       await infiniteScrollPage.scrollToBottomOfPage();
       await delay(500);
 
-      const contentAfterScroll = infiniteScrollPage.getNumberOfParagraphs();
-      console.log('AFTER: ' + contentAfterScroll);
+      const contentAfterScroll =
+        await infiniteScrollPage.getNumberOfParagraphs();
 
       expect(contentAfterScroll).toBeGreaterThan(contentBeforeScroll);
     }

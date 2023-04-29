@@ -1,5 +1,5 @@
 import { Page } from '@playwright/test';
-import fs from 'fs/promises';
+import * as fs from 'fs/promises';
 
 export class FileUploadPageObject {
   readonly chooseFile = this.page.locator('#file-upload');

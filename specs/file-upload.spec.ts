@@ -1,6 +1,5 @@
-import { FileChooser, expect } from '@playwright/test';
+import { expect } from '@playwright/test';
 import test from '../fixtures';
-import fs from 'fs/promises';
 
 test.describe('File Upload', () => {
   const dummyFileName = 'dummy_upload.txt';
