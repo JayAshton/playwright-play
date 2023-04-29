@@ -19,7 +19,6 @@ export class FileUploadPageObject {
   // Emulate drag and drop event using DataTransfer
   async dragAndDropFile(filePath: string, fileName: string, fileType: string) {
     const buffer = await fs.readFile(filePath);
-    const encodedBuffer = buffer.toString('base64');
 
     const dataTransfer = await this.page.evaluateHandle(
       async ({ bufferData, localFileName, localFileType }) => {
