@@ -6,6 +6,7 @@ import { DropdownPageObject } from './dropdown.po';
 import { ExitIntentPageObject } from './exit-intent.po';
 import { FileUploadPageObject } from './file-upload.po';
 import { InfiniteScrollPageObject } from './infinite-scroll.po';
+import { HoverPageObject } from './hover.po';
 
 export interface PageFixtures {
   addRemoveElementsPage: AddRemoveElementsPageObject;
@@ -15,6 +16,7 @@ export interface PageFixtures {
   exitIntentPage: ExitIntentPageObject;
   fileUploadPage: FileUploadPageObject;
   infiniteScrollPage: InfiniteScrollPageObject;
+  hoverPage: HoverPageObject;
 }
 
 export const pageFixtures = {
@@ -38,5 +40,8 @@ export const pageFixtures = {
   },
   infiniteScrollPage: async ({ page }, use) => {
     await use(new InfiniteScrollPageObject(page));
+  },
+  hoverPage: async ({ page }, use) => {
+    await use(new HoverPageObject(page));
   },
 };
