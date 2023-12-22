@@ -20,4 +20,5 @@ The following options are also helpful:
 
 Adding `await page.pause()` will pause execution when the browser is launched in headed mode and the debugger UI will be made available.
 
-For running specific tests, you can add `test.only`, in which case you do not need to specify the exact location of the test (e.g. specs/checkboxes.spec.ts:23)
+For running specific tests, you can add `test.only`, in which case you do not need to specify the exact location of the test (e.g. specs/checkboxes.spec.ts:23).
+Alternatively, you can point to the file name and line number of the test.
