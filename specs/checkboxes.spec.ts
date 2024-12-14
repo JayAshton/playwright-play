@@ -17,7 +17,7 @@ test.describe('Checkboxes', () => {
 
   test('Checkbox 2 can be unchecked', async ({ checkboxPage }) => {
     await checkboxPage.checkboxTwo.uncheck();
-    await expect(checkboxPage.checkboxTwo).toBeChecked();
+    await expect(checkboxPage.checkboxTwo).not.toBeChecked();
   });
 
   test('Both checkboxes can be checked at the same time', async ({

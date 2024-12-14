@@ -11,9 +11,8 @@ test.describe('Horizontal Slider', () => {
   }) => {
     const targetValue = 2;
     await sliderPage.changeSliderValueWithJSInjection(targetValue);
-    await expect(sliderPage.slider).toHaveAttribute(
-      targetValue.toString()
-    );
+    const actualValue = await sliderPage.slider.getAttribute("value");
+    expect(actualValue).toMatch(targetValue.toString());
   });
 
   test('Sliding the bar modifies the selected value (playwright drag and drop)', async ({

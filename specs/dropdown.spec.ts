@@ -21,7 +21,7 @@ test.describe('Dropdown List', () => {
   test('When selecting an option, the selected option is displayed', async ({
     dropdownPage,
   }) => {
-    for (const option in correctOptions) {
+    for (const option of correctOptions) {
       await dropdownPage.selectOption(option);
       expect(await dropdownPage.getSelectedOption()).toEqual(option);
     }
