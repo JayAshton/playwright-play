@@ -11,7 +11,7 @@ test.describe('Horizontal Slider', () => {
   }) => {
     const targetValue = 2;
     await sliderPage.changeSliderValueWithJSInjection(targetValue);
-    expect(await sliderPage.slider.getAttribute('value')).toEqual(
+    await expect(sliderPage.slider).toHaveAttribute(
       targetValue.toString()
     );
   });
@@ -25,6 +25,6 @@ test.describe('Horizontal Slider', () => {
     await sliderPage.dragSlider(targetPercentage);
 
     // Max = 5, 2.5 = 50%
-    expect(await sliderPage.range.textContent()).toEqual('2.5');
+    await expect(await sliderPage.range).toHaveText('2.5');
   });
 });

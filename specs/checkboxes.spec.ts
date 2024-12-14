@@ -7,17 +7,17 @@ test.describe('Checkboxes', () => {
   });
 
   test('Checkbox 2 is checked by default', async ({ checkboxPage }) => {
-    expect(await checkboxPage.checkboxTwo.isChecked()).toBeTruthy();
+    await expect(checkboxPage.checkboxTwo).toBeChecked();
   });
 
   test('Checkbox 1 can be checked', async ({ checkboxPage }) => {
     await checkboxPage.checkboxOne.check();
-    expect(await checkboxPage.checkboxOne.isChecked()).toBeTruthy();
+    await expect(checkboxPage.checkboxOne).toBeChecked();
   });
 
   test('Checkbox 2 can be unchecked', async ({ checkboxPage }) => {
     await checkboxPage.checkboxTwo.uncheck();
-    expect(await checkboxPage.checkboxTwo.isChecked()).toBeFalsy();
+    await expect(checkboxPage.checkboxTwo).toBeChecked();
   });
 
   test('Both checkboxes can be checked at the same time', async ({
@@ -25,7 +25,7 @@ test.describe('Checkboxes', () => {
   }) => {
     await checkboxPage.checkboxOne.check();
     await checkboxPage.checkboxTwo.check();
-    expect(await checkboxPage.checkboxOne.isChecked()).toBeTruthy();
-    expect(await checkboxPage.checkboxTwo.isChecked()).toBeTruthy();
+    await expect(checkboxPage.checkboxOne).toBeChecked();
+    await expect(checkboxPage.checkboxTwo).toBeChecked();
   });
 });

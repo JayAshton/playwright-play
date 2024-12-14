@@ -17,6 +17,6 @@ test.describe('Exit intent', () => {
     exitIntentPage,
   }) => {
     await exitIntentPage.closeButton.click();
-    await expect(exitIntentPage.modal).not.toBeVisible();
+    await expect(exitIntentPage.modal).toBeHidden();
   });
 });

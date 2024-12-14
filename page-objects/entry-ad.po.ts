@@ -41,8 +41,8 @@ export class EntryAdPageObject {
   }
 
   async assertAdModalIsNotVisible() {
-    await expect.soft(this.adModal).not.toBeVisible();
-    await expect.soft(this.adModalTitle).not.toBeVisible();
-    await expect.soft(this.adModalCloseBtn).not.toBeVisible();
+    await expect.soft(this.adModal).toBeHidden();
+    await expect.soft(this.adModalTitle).toBeHidden();
+    await expect.soft(this.adModalCloseBtn).toBeHidden();
   }
 }

@@ -26,7 +26,7 @@ test.describe('Broken Images', () => {
         errorLogs.push(message.text());
     });
 
-    await page.goto('broken_images', { waitUntil: 'networkidle' });
+    await page.goto('broken_images');
     errorLogs.forEach(async (error) => {
       expect(error).toContain(errorMessage);
     });

@@ -17,7 +17,7 @@ test.describe('Adding and removing elements from the DOM', () => {
     expect.soft(await addRemoveElementsPage.addedElement.count()).toEqual(1);
 
     await addRemoveElementsPage.deleteElement();
-    await expect.soft(addRemoveElementsPage.addedElement).not.toBeVisible();
+    await expect.soft(addRemoveElementsPage.addedElement).toBeHidden();
     expect.soft(await addRemoveElementsPage.addedElement.count()).toEqual(0);
   });
 

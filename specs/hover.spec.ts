@@ -13,8 +13,8 @@ test.describe('Dropdown List', () => {
 
     for (let i = 0; i < allFigures.length; i++) {
       await allFigures[i].hover();
-      expect(await hoverPage.figureName.nth(i).isVisible()).toBeTruthy();
-      expect(await hoverPage.figureLink.nth(i).isVisible()).toBeTruthy();
+      await expect(hoverPage.figureName.nth(i)).toBeVisible();
+      await expect(hoverPage.figureLink.nth(i)).toBeVisible();
     }
   });
 });

@@ -1,27 +1,19 @@
 {
-   "compilerOptions":{
-      "target":"es6",
-      "moduleResolution":"node",
-      "module":"commonjs",
-      "declaration":false,
-      "noLib":false,
-      "emitDecoratorMetadata":true,
-      "experimentalDecorators":true,
-      "pretty":true,
-      "allowUnreachableCode":true,
-      "allowUnusedLabels":true,
-      "noImplicitAny":false,
-      "noImplicitReturns":false,
-      "noImplicitUseStrict":false,
-      "outDir":"dist/",
-      "listFiles":false,
-      "noEmitHelpers":true
-   },
-   "include":[
-      "**/*.ts"
-   ],
-   "exclude":[
-      "node_modules"
-   ],
-   "compileOnSave":false
+  "compilerOptions": {
+    "target": "ESNext",
+    "moduleResolution": "node",
+    "moduleDetection": "force",
+    "module": "ES2022",
+    "pretty": true,
+    "allowJs": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+    "strict": true,
+    "noEmit": true,
+    "useDefineForClassFields": false
+  },
+  "include": ["**/*.ts"],
+  "exclude": ["node_modules"]
 }
