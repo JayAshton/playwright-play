@@ -10,6 +10,7 @@
     "resolveJsonModule": true,
     "noUncheckedIndexedAccess": true,
     "noImplicitOverride": true,
+    "noImplicitAny": false,
     "strict": true,
     "noEmit": true,
     "useDefineForClassFields": false

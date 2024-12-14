@@ -9,10 +9,10 @@ test.describe('Dropdown List', () => {
   test('Hovering over an avatar displays associated text', async ({
     hoverPage,
   }) => {
-    const allFigures = await hoverPage.figures.all();
+    const allFigures = await hoverPage.getAllFixtures();
 
     for (let i = 0; i < allFigures.length; i++) {
-      await allFigures[i].hover();
+      await allFigures[i]!.hover();
       await expect(hoverPage.figureName.nth(i)).toBeVisible();
       await expect(hoverPage.figureLink.nth(i)).toBeVisible();
     }

@@ -13,6 +13,7 @@ export class SliderPageObject {
         const slider = document.querySelector(
           '.sliderContainer input[type="range"]'
         );
+        if (!slider) throw new Error('No slider found');
         slider.setAttribute('value', convertedTargetValue.convertedTargetValue);
       },
       { convertedTargetValue }
@@ -22,6 +23,8 @@ export class SliderPageObject {
   async dragSlider(targetPercentage: number) {
     const thumbBoundingBox = await this.slider.boundingBox();
     const sliderBoundingBox = await this.slider.boundingBox();
+
+    if (!thumbBoundingBox || !sliderBoundingBox) throw new Error("Bounding boxes not found")
 
     const startPoint = {
       x: thumbBoundingBox.x + thumbBoundingBox.width / 2,

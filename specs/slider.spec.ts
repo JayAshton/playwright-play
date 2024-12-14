@@ -25,6 +25,6 @@ test.describe('Horizontal Slider', () => {
     await sliderPage.dragSlider(targetPercentage);
 
     // Max = 5, 2.5 = 50%
-    await expect(await sliderPage.range).toHaveText('2.5');
+    await expect(sliderPage.range).toHaveText('2.5');
   });
 });
